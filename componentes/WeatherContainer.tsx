@@ -23,7 +23,7 @@ const WeatherContainer = (): JSX.Element => {
 
   const { isLoading, weatherData, forcastData, isError } = useSelector(
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (state : any ) => state,
+    (state: any) => state,
     shallowEqual
   )
   //   const nextProps = useSelector((state: data) => ({
@@ -45,7 +45,7 @@ const WeatherContainer = (): JSX.Element => {
     //   if (weather === undefined) {
     //     const weatherDispatch = weatherObject?.weatherDispatch
     //     if (weatherDispatch) {
-      //@ts-ignore
+    //@ts-ignore
     dispatch(getWeatherByLocation(toast))
     //     }
     //   }

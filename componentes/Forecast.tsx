@@ -3,7 +3,7 @@ import { dateFormat } from '../helpers/HelperFunctions'
 import { ForecastBox } from './Weathercards'
 import { ForecastModal } from './ForecastModal'
 import styles from '../styles/Forecast.module.css'
-import { Data} from '../helpers/Types';
+import { Data } from '../helpers/Types'
 
 interface ForecastProps {
   key: number
@@ -12,7 +12,6 @@ interface ForecastProps {
 export const Forecast = ({ data }: ForecastProps): JSX.Element => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const { date, day }: any = dateFormat(data.dt)
-  console.log(data);
 
   return (
     <div>

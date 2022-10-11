@@ -1,7 +1,7 @@
-import { googleMapApi } from "../helpers/Api";
+import { googleMapApi } from '../helpers/Api'
 
 interface MapProps {
-  city: string;
+  city: string
 }
 
 export const Map = ({ city }: MapProps): JSX.Element => (
@@ -17,4 +17,4 @@ export const Map = ({ city }: MapProps): JSX.Element => (
       src={`https://www.google.com/maps/embed/v1/place?key=${googleMapApi}&q=${city}`}
     ></iframe>
   </div>
-);
+)

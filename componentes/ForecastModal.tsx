@@ -3,16 +3,16 @@ import { dateFormat } from '../helpers/HelperFunctions'
 import { Modal, ModalHeader, ModalBody, Container, Col } from 'reactstrap'
 import { BsSun, BsCloudMoon } from 'react-icons/bs'
 import styles from '../styles/ForecastModal.module.css'
-import { Data} from '../helpers/Types';
+import { Data } from '../helpers/Types'
 
 interface ForecastModalProps {
-  data: Data;
+  data: Data
 }
 
 export const ForecastModal = ({ data }: ForecastModalProps): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false)
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const { date, day }: any= dateFormat(data.dt)
+  const { date, day }: any = dateFormat(data.dt)
 
   const toggle = (): void => {
     setIsOpen(!isOpen)

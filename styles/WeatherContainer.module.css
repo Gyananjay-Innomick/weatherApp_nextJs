@@ -1,105 +1,105 @@
-.weather_container{
-    max-width: 1400px;
-    min-height: 550px;
-    padding: 20px;
-    margin: 20px auto 5px;
+.weather_container {
+  max-width: 1400px;
+  min-height: 550px;
+  padding: 20px;
+  margin: 20px auto 5px;
 }
-.weather_container_upper{
-    display: grid;
-    grid-template-columns: 30% 27% 38%;;
-    row-gap: 20px;
-    column-gap: 30px;
+.weather_container_upper {
+  display: grid;
+  grid-template-columns: 30% 27% 38%;
+  row-gap: 20px;
+  column-gap: 30px;
 }
-.weather_location_card{
-    color: #5e82f4;
-    padding: 20px;
-    text-align: center;
+.weather_location_card {
+  color: #5e82f4;
+  padding: 20px;
+  text-align: center;
 }
-.iconRotate{
-    animation: iconRotator 1s linear 0s 1;
+.iconRotate {
+  animation: iconRotator 1s linear 0s 1;
 }
 @keyframes iconRotator {
-    0% {
-        transform: rotate(0deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
 
-    100% {
-        transform: rotate(360deg);
-    }
+  100% {
+    transform: rotate(360deg);
+  }
 }
-.heading{
-    font-weight: var(--bold);
-    font-size: var(--fontsize-3xl);
-    line-height: 1.33;
+.heading {
+  font-weight: var(--bold);
+  font-size: var(--fontsize-3xl);
+  line-height: 1.33;
 }
-.large_heading{
-    font-weight: var(--bold);
-    font-size: 100px;
-    line-height: 1.33;
+.large_heading {
+  font-weight: var(--bold);
+  font-size: 100px;
+  line-height: 1.33;
 }
-.weather_details_card{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    height: 100%;
-    padding: 8px;
+.weather_details_card {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 100%;
+  padding: 8px;
 }
-.weather_details_card::before{
-    content: none;
+.weather_details_card::before {
+  content: none;
 }
-.weather_details_label{
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 15px;
+.weather_details_label {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
 }
-.weather_details_data{
-    border-radius: 30px;
-    background: #5e82f4;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 15%;
+.weather_details_data {
+  border-radius: 30px;
+  background: #5e82f4;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15%;
 }
-.details_label{
-    display: block;
-    color: #5e82f4;
-    font-weight: var(--medium);
-    margin-top: 15px;
-    font-size: 18px;
+.details_label {
+  display: block;
+  color: #5e82f4;
+  font-weight: var(--medium);
+  margin-top: 15px;
+  font-size: 18px;
 }
-.details_data{
-    display: block;
-    color: white;
-    font-weight: var(--medium);
-    margin-top: 15px;
-    font-size: 18px;
+.details_data {
+  display: block;
+  color: white;
+  font-weight: var(--medium);
+  margin-top: 15px;
+  font-size: 18px;
 }
-.forecast_container{
-    display: grid;
-    margin-top: 40px;
-    grid-template-columns: repeat(8, 1fr);
-    row-gap: 20px;
-    column-gap: 20px;
+.forecast_container {
+  display: grid;
+  margin-top: 40px;
+  grid-template-columns: repeat(8, 1fr);
+  row-gap: 20px;
+  column-gap: 20px;
 }
-@media screen and (max-width: 992px){
-    .forecast_container{
-        grid-template-columns: repeat(5, 1fr);
-    }
-    .weather_container_upper{
-        grid-template-columns: repeat(2, 1fr);
-    }
+@media screen and (max-width: 992px) {
+  .forecast_container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .weather_container_upper {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-@media screen and (max-width: 768px){
-    .forecast_container{
-        grid-template-columns: repeat(4, 1fr);
-    }
-    .weather_container_upper{
-        grid-template-columns: repeat(2, 1fr);
-    }
+@media screen and (max-width: 768px) {
+  .forecast_container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .weather_container_upper {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-@media screen and (max-width: 567px){
-    .forecast_container{
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .weather_container_upper{
-        grid-template-columns: repeat(1, 1fr);
-    }
+@media screen and (max-width: 567px) {
+  .forecast_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .weather_container_upper {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
