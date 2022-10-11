@@ -1,0 +1,14 @@
+:root {
+    --semibold: 600;
+    --bold: 700;
+    --light: 300;
+    --regular: 400;
+    --medium: 500;
+    --fontsize-sm: 14px;
+    --fontsize-lg: 20px;
+    --fontsize-md: 16px;
+    --fontsize-xs: 12px;
+    --fontsize-2xl: 24px;
+    --fontsize-3xl: 30px;
+    --fontsize-4xl: 36px;
+  }

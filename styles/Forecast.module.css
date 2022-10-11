@@ -1,0 +1,11 @@
+.forecast_heading{
+    padding: 5px;
+    background-color: #5e82f4;
+
+}
+.forecast_heading_text{
+    color: white;
+    font-size: 18px;
+    font-weight: var(--medium);
+    margin: 0 !important;
+}

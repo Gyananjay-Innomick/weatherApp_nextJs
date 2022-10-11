@@ -1,0 +1,21 @@
+
+.error {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+.error_image{
+    width: 45%;
+}
+@media screen and (max-width: 768px){
+    .error_image{
+        width: 60%;
+    }
+}
+@media screen and (max-width: 567px){
+    .error_image{
+        width: 70%;
+    }
+}
