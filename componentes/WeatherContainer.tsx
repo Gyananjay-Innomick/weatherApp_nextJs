@@ -22,8 +22,7 @@ const WeatherContainer = (): JSX.Element => {
   const dispatch = useDispatch()
 
   const { isLoading, weatherData, forcastData, isError } = useSelector(
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (state: any) => state,
+    (state: never) => state,
     shallowEqual
   )
   //   const nextProps = useSelector((state: data) => ({

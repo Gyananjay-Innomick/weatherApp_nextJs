@@ -1,6 +1,6 @@
 export const celsius = (x: number): string => (x - 273).toFixed(2)
 
-export const dateFormat = (dt: number): object => {
+export const dateFormat = (dt: number): { date: string; day: string } => {
   const milliseconds = dt * 1000
 
   const myDate = new Date(milliseconds)

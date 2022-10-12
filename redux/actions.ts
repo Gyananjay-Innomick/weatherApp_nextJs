@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import axios, { AxiosResponse } from 'axios'
 import { weatherAppAPI } from '../helpers/Api'
 import { notificationHandler } from '../helpers/NotificationHandler'
@@ -24,9 +23,11 @@ export const getDataError = () => {
 export const getWeatherByLocation =
   (toast: CallableFunction) =>
   (dispatch: (arg0: { type: string; payload?: object }) => void) => {
+    console.log('test')
     const success = async (position: {
       coords: { latitude: number; longitude: number }
     }) => {
+      console.log('success')
       try {
         const { latitude, longitude } = position.coords
         dispatch(getDataLoading())
@@ -60,10 +61,12 @@ export const getWeatherByLocation =
     }
 
     const error = (err: { code: number; message: string }) => {
-      console.warn(`ERROR(${err.code}): ${err.message}`)
+      console.log(`ERROR(${err.code}): ${err.message}`)
+      const errorMessage =
+        err.code === 1 ? 'Please turn on your location' : 'Network Error'
       notificationHandler(
         toast,
-        'Please turn on your location',
+        errorMessage,
         'error',
         'location-weather-error'
       )
@@ -95,15 +98,16 @@ export const getWeatherByCity =
         'success',
         'city-weather-success'
       )
-    } catch (err) {
+    } catch (err : any) {
       console.log(err)
       dispatch(getDataError())
-      notificationHandler(
-        toast,
-        "City weather data doesn't exist",
-        'error',
-        'city-weather-error'
-      )
+      let errorMessage: string
+      if (err.response.data) {
+        errorMessage = err.response.data.message
+      } else {
+        errorMessage = err.message
+      }
+      notificationHandler(toast, errorMessage, 'error', 'city-weather-error')
     }
   }
 

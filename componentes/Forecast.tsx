@@ -10,8 +10,7 @@ interface ForecastProps {
   data: Data
 }
 export const Forecast = ({ data }: ForecastProps): JSX.Element => {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const { date, day }: any = dateFormat(data.dt)
+  const { date, day } = dateFormat(data.dt)
 
   return (
     <div>

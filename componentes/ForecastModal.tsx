@@ -11,8 +11,7 @@ interface ForecastModalProps {
 
 export const ForecastModal = ({ data }: ForecastModalProps): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false)
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const { date, day }: any = dateFormat(data.dt)
+  const { date, day } = dateFormat(data.dt)
 
   const toggle = (): void => {
     setIsOpen(!isOpen)
