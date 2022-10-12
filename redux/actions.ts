@@ -98,7 +98,7 @@ export const getWeatherByCity =
         'success',
         'city-weather-success'
       )
-    } catch (err : any) {
+    } catch (err: any) {
       console.log(err)
       dispatch(getDataError())
       let errorMessage: string
